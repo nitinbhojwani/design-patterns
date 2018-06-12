@@ -1,0 +1,15 @@
+language: python
+
+python:
+ - "3.4"
+ - "3.5"
+ - "3.6"
+
+install:
+ - git clone https://github.com/nitinbhojwani/pep8-checker
+ - pip install -r pep8-checker/requirements-python3.txt
+ - export PYTHONPATH=$PYTHONPATH:$TRAVIS_BUILD_DIR
+
+script:
+ - fab -f pep8-checker/fabfile.py check:exclude='pep8-checker\,venv'
+ - python tests.py
