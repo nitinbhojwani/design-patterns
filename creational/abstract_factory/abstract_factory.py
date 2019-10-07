@@ -23,7 +23,8 @@ class AbstractProduct2(ABC):
 
 class AbstractFactory(ABC):
     """Abstract Factory is an abstract class that declares
-       abstract create functions that create different Class' objects or interface
+       abstract create functions that create different Class'
+       objects.
        It creates different product(s) of same family.
        In this case, it's product_1 and product_2"""
 
